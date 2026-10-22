@@ -1,38 +1,23 @@
 import React from 'react';
-import GaneshChaturthi from '../components/GaneshChaturthi';
-import HomeHero from '../components/sections/HomeHero';
-import WhoWeAre from '../components/sections/WhoWeAre';
-import ServicesGrid from '../components/sections/ServicesGrid';
-import SolutionsCapabilities from '../components/sections/SolutionsCapabilities';
-import ProcessSection from '../components/sections/ProcessSection';
-import PortfolioPlaceholder from '../components/sections/PortfolioPlaceholder';
-import FinalCTA from '../components/sections/FinalCTA';
+import Hero from '../components/Hero';
+import ComingSoon from '../components/ComingSoon';
+import BrandStatement from '../components/BrandStatement';
+import CallToAction from '../components/CallToAction';
 
 export default function HomePage({ onOpenContact }) {
   return (
     <>
+      {/* Dedicated Under Construction Hero with Countdown & Interactive 3D Wordmark */}
+      <Hero onOpenContact={onOpenContact} />
 
+      {/* Launch Progress & Engineering Milestones towards 25/10/2026 */}
+      <ComingSoon onOpenContact={onOpenContact} />
 
-      {/* Main Hero */}
-      <HomeHero onOpenContact={onOpenContact} />
+      {/* Brand & Pillars Teaser */}
+      <BrandStatement />
 
-      {/* Who We Are */}
-      <WhoWeAre />
-
-      {/* Services */}
-      <ServicesGrid />
-
-      {/* Solutions & Capabilities */}
-      <SolutionsCapabilities />
-
-      {/* Process */}
-      <ProcessSection />
-
-      {/* Portfolio */}
-      <PortfolioPlaceholder />
-
-      {/* Final CTA */}
-      <FinalCTA onOpenContact={onOpenContact} />
+      {/* Early Access / Get in Touch */}
+      <CallToAction onOpenContact={onOpenContact} />
     </>
   );
 }

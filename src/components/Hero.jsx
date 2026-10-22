@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { ArrowRight, Zap, Image as ImageIcon } from 'lucide-react';
 import CodeForgeLightningText from './CodeForgeLightningText';
 import TiltCard3D from './TiltCard3D';
+import CountdownTimer from './CountdownTimer';
 
 export default function Hero({ onOpenContact }) {
   const [viewMode, setViewMode] = useState('lightning'); // 'lightning' | 'render'
 
-  const scrollToExplore = (e) => {
+  const scrollToProgress = (e) => {
     e.preventDefault();
-    const target = document.querySelector('#statement');
+    const target = document.querySelector('#progress') || document.querySelector('#statement');
     if (target) {
       target.scrollIntoView({ behavior: 'smooth' });
     }
@@ -35,14 +36,14 @@ export default function Hero({ onOpenContact }) {
           {/* LEFT: Text & Executive Messaging */}
           <div className="lg:col-span-7 space-y-7 text-left z-10">
             
-            {/* Small Status Indicator with Glowing Pulse Dot */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-900/90 border border-slate-300 dark:border-blue-500/40 text-slate-800 dark:text-slate-200 shadow-xs dark:shadow-[0_0_15px_rgba(37,99,235,0.3)]">
+            {/* Status Indicator with Glowing Pulse Dot */}
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-900/90 border border-slate-300 dark:border-blue-500/40 text-slate-800 dark:text-slate-200 shadow-xs dark:shadow-[0_0_15px_rgba(37,99,235,0.3)]">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-blue-500 shadow-[0_0_8px_#38bdf8]" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-600 dark:bg-cyan-400 shadow-[0_0_8px_#38bdf8]" />
               </span>
-              <span className="text-[11px] font-semibold tracking-wider uppercase text-slate-700 dark:text-slate-200">
-                WEBSITE UNDER CONSTRUCTION
+              <span className="text-[11px] font-mono font-semibold tracking-wider uppercase text-slate-700 dark:text-slate-200">
+                UNDER CONSTRUCTION • OFFICIAL LAUNCH 25/10/2026
               </span>
             </div>
 
@@ -56,13 +57,18 @@ export default function Hero({ onOpenContact }) {
 
             {/* Supporting Headline */}
             <p className="text-xl sm:text-2xl font-medium text-slate-700 dark:text-slate-200 tracking-tight">
-              We’re building the future of digital innovation.
+              We’re engineering the future of digital innovation.
             </p>
 
             {/* Description */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-normal leading-relaxed max-w-2xl">
-              CodeForge is currently building something new. Our team is working behind the scenes to create innovative technology solutions that make businesses smarter, faster and more connected.
+              CodeForge is currently building something new. Our team is working behind the scenes to create innovative technology solutions that make businesses smarter, faster and more connected. The official launch takes place on <span className="font-semibold text-blue-600 dark:text-cyan-300">October 25, 2026</span>.
             </p>
+
+            {/* Live Countdown Timer */}
+            <div className="pt-1">
+              <CountdownTimer targetDate="2026-10-25T00:00:00" />
+            </div>
 
             {/* Buttons */}
             <div className="pt-2 flex flex-wrap items-center gap-4">
@@ -75,11 +81,11 @@ export default function Hero({ onOpenContact }) {
               </button>
 
               <a
-                href="#statement"
-                onClick={scrollToExplore}
+                href="#progress"
+                onClick={scrollToProgress}
                 className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 dark:bg-white/[0.05] dark:hover:bg-white/[0.08] text-slate-800 dark:text-slate-200 font-semibold text-sm border border-slate-300 dark:border-white/[0.1] hover:border-slate-400 dark:hover:border-blue-500/40 hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
               >
-                <span>Explore CodeForge</span>
+                <span>Launch Progress</span>
               </a>
             </div>
 

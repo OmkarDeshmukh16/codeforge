@@ -56,6 +56,9 @@ export default function Navbar({ onOpenContact, theme, toggleTheme }) {
           <span className="font-bold text-xl tracking-tight text-slate-900 dark:text-white font-sans">
             Code<span className="text-blue-600 font-extrabold">Forge</span>
           </span>
+          <span className="hidden sm:inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-mono font-semibold uppercase tracking-wider bg-blue-50 dark:bg-blue-600/15 text-blue-600 dark:text-cyan-400 border border-blue-200/80 dark:border-blue-500/30 shadow-xs">
+            Launch: 25/10/26
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
