@@ -1,0 +1,312 @@
+/* ══════════════════════════════════
+   PRICING PAGE CSS
+══════════════════════════════════ */
+
+.pricing-page {}
+
+/* ── Pricing Grid ── */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-bottom: 2rem;
+}
+
+/* ── Plan Wrapper (for popular badge positioning) ── */
+.pricing-plan-wrapper {
+  position: relative;
+}
+
+.pricing-plan-wrapper--popular {
+  transform: translateY(-12px);
+}
+
+.pricing-popular-badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 18px;
+  background: linear-gradient(135deg, #7c3aed, #6c63ff);
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.5);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  white-space: nowrap;
+}
+
+/* ── Plan Card ── */
+.pricing-plan {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease;
+}
+
+.pricing-plan--popular {
+  border-color: rgba(124, 58, 237, 0.4);
+  box-shadow: 0 0 40px rgba(124, 58, 237, 0.2), 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Plan Top */
+.pricing-plan__top {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+}
+
+.pricing-plan__top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--clr, #7c3aed);
+  border-radius: 24px 24px 0 0;
+}
+
+.pricing-plan__name {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.3rem;
+}
+
+.pricing-plan__tagline {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.25rem;
+  line-height: 1.4;
+}
+
+.pricing-plan__price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.pricing-plan__amount {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: var(--clr, #7c3aed);
+  line-height: 1;
+}
+
+.pricing-plan__note {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Features */
+.pricing-plan__features {
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.pricing-feature {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.pricing-feature.included {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.pricing-feature.excluded {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: line-through;
+}
+
+.pricing-feature__icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.pricing-feature.excluded .pricing-feature__icon {
+  color: rgba(255, 255, 255, 0.25);
+}
+
+/* Actions */
+.pricing-plan__actions {
+  padding: 0 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.pricing-plan__btn {
+  width: 100%;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+.pricing-plan__whatsapp {
+  width: 100%;
+  justify-content: center;
+  border-radius: 12px;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.88rem;
+}
+
+.pricing-plan__whatsapp:hover {
+  border-color: #25D366;
+  color: #25D366;
+  background: rgba(37, 211, 102, 0.08);
+}
+
+/* Pricing Note */
+.pricing-note {
+  text-align: center;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.45);
+  padding-top: 0.5rem;
+}
+
+.pricing-note__link {
+  color: #c084fc;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.pricing-note__link:hover {
+  color: #a855f7;
+}
+
+/* ── FAQ ── */
+.faq-list {
+  max-width: 760px;
+  margin: 3rem auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.faq-item:hover {
+  border-color: rgba(124, 58, 237, 0.3);
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  cursor: pointer;
+  background: none;
+  border: none;
+  gap: 1rem;
+  transition: color 0.2s;
+}
+
+.faq-question.open {
+  color: #c084fc;
+}
+
+.faq-chevron {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+
+.faq-question.open .faq-chevron {
+  color: #c084fc;
+}
+
+.faq-answer {
+  overflow: hidden;
+}
+
+.faq-answer p {
+  padding: 0 1.5rem 1.25rem;
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ── Pricing CTA ── */
+.pricing-cta {
+  position: relative;
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a0533 40%, #0f0f2e 100%);
+  overflow: hidden;
+  text-align: center;
+}
+
+.pricing-cta__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.pricing-cta__orb--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(124, 58, 237, 0.3) 0%, transparent 70%);
+  top: -150px;
+  right: -100px;
+}
+
+.pricing-cta__orb--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0, 212, 170, 0.2) 0%, transparent 70%);
+  bottom: -100px;
+  left: -80px;
+}
+
+.pricing-cta h2 { color: #fff; }
+.pricing-cta p { color: rgba(255, 255, 255, 0.65); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .pricing-plan-wrapper--popular {
+    transform: none;
+  }
+  .pricing-popular-badge {
+    position: static;
+    transform: none;
+    display: inline-flex;
+    margin-bottom: 0.75rem;
+  }
+}
