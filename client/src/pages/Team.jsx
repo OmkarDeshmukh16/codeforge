@@ -66,7 +66,18 @@ const team = [
     github: 'https://github.com/KalyaniDarekar',
     email: 'kalyanidarekar@gmail.com'
   },
-
+  {
+    name: 'Puja Davghat',
+    role: 'Full-stack Developer',
+    initials: 'PD',
+    color: '#c62155',
+    bio: 'Passionate Full-Stack Developer with hands-on experience in building modern, responsive, and user-friendly web applications. Experienced in developing real-world projects, implementing innovative solutions, and collaborating with teams to build scalable and efficient applications. Always eager to explore emerging technologies and continuously improve development skills.',
+    skills: ['Node.js', 'React.js', 'MongoDB', 'Rest APIs'],
+    linkedin: 'https://www.linkedin.com/in/shreyash-nikam-30b5b5304/',
+    twitter: '#',
+    github: 'https://github.com/shreyashnikam98',
+    email: 'davghatpooja@gmail.com'
+  },
 
 ];
 
